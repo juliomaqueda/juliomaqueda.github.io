@@ -1,0 +1,165 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+@media screen and (min-width: 64em) {
+	.main-content {
+		max-width: 1000px;
+		padding: 0 0;
+	}
+}
+
+@media screen and (max-width: 549px) {
+	.personal-contact {
+		display: grid;
+		margin-left: 15px;
+
+		img {
+			width: 24px;
+			opacity: 0.3;
+		}
+	}
+}
+
+@media screen and (min-width: 550px) {
+	.personal-contact {
+		display: flex;
+		align-items: center;
+
+		img {
+			width: 30px;
+			margin-left: 15px;
+			opacity: 0.3;
+		}
+	}
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+header {
+	text-align: left;
+	width: 100%;
+	border-bottom: 1px solid #eff0f1;
+	padding: 20px 0;
+	margin: 0 0 40px 0;
+
+	.project-name {
+		font-size: 1.1em;
+		color: #819198;
+	}
+
+	.project-tagline {
+		font-size: 0.9em;
+	}
+
+	.main-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.personal-info {
+		display: flex;
+		align-items: center;
+
+		img {
+			width: 100px;
+			border-radius: 50%;
+			margin-right: 15px;
+			max-width: unset;
+		}
+	}
+}
+
+footer {
+	padding: 2rem 0;
+	margin-top: 2rem;
+	border-top: solid 1px #eff0f1;
+	font-size: 1rem;
+}
+
+.main-content {
+	padding: 0 2rem;
+	font-size: 1rem;
+
+	table th {
+		background-color: #f7f7f7;
+	}
+
+	code {
+		color: #8a447b;
+		background-color: #eaeaea;
+	}
+
+	.post-info {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0.8rem;
+
+		.post-read-time {
+			margin-top: 0;
+			color: #159957;
+			margin-right: 10px
+		}
+
+		.post-read-time:before {
+			content: "◴";
+			font-size: 1.3em;
+			margin-right: 5px;
+			line-height: 1em;
+		}
+
+		.post-tag {
+			margin-left: 6px;
+			color: #159957;
+			background-color: #eff5f2;
+			padding: 2px 8px;
+			border-radius: 8px;
+		}
+	}
+
+	.centered {
+		text-align: center;
+	}
+
+	.nowrap {
+		white-space: nowrap;
+	}
+}
+
+// Highlight custom styles
+.main-content {
+	pre {
+		tab-size: 4;
+		background-color: #f7f9f7;
+
+		> code {
+			color: #000; // #0c8272
+		}
+	}
+}
+
+.highlight * {
+	.k, .kc, .kd, .kt, .nc, .nd, .nf, .nl, .o {
+		font-weight: normal;
+	}
+
+	.k, .kd {
+		color: #003eb3;
+	}
+
+	.n, .nx {
+		color: #0d584e;
+	}
+
+	.nd {
+		color: #736223;
+	}
+
+	.dl, .s1 {
+		color: #d14;
+	}
+}

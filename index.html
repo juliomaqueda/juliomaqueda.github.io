@@ -1,0 +1,42 @@
+---
+layout: default
+title: Tech blog
+---
+
+{% for post in paginator.posts %}
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+<div class="post-info">
+	<span class="post-read-time">{{ post.time }}</span>
+
+	{% for tag in post.tags %}
+	<span class="post-tag">{{tag}}</span>
+	{% endfor %}
+</div>
+
+<div class="content">
+	{{ post.excerpt }}
+
+	{% if post.language == 'spanish' %}
+	<a href="{{ post.url }}">Seguir leyendo...</a>
+	{% else %}
+	<a href="{{ post.url }}">Continue reading...</a>
+	{% endif %}
+</div>
+{% endfor %}
+
+<!-- Pagination links -->
+{% if paginator.previous_page or paginator.next_page %}
+<div class="pagination">
+	{% if paginator.previous_page %}
+	<a href="{{ paginator.previous_page_path }}" class="previous">
+		Previous
+	</a>
+	{% endif %}
+	<span class="page_number ">
+		Page: {{ paginator.page }} of {{ paginator.total_pages }}
+	</span>
+	{% if paginator.next_page %}
+	<a href="{{ paginator.next_page_path }}" class="next">Next</a>
+	{% endif %}
+</div>
+{% endif %}
